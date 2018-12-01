@@ -4,3 +4,9 @@ PRODUCT_COPY_FILES += \
     device/google/sunfish/permissions/privapp-permissions-aosp-extended.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-aosp-extended.xml
 
 DEVICE_PACKAGE_OVERLAYS += device/google/sunfish/overlay-calyx
+
+# RCS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling \
+    RcsService
