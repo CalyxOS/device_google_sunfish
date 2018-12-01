@@ -24,6 +24,11 @@ PRODUCT_PACKAGES += \
 
 TARGET_PREBUILT_KERNEL := device/google/sunfish-kernel/Image.lz4
 
+# RCS
+PRODUCT_PACKAGES += \
+    PresencePolling \
+    RcsService
+
 # Build necessary packages for system_ext
 
 # Display
