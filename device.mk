@@ -851,6 +851,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:system/etc/permissions/android.hardware.telephony.euicc.xml
 
+PRODUCT_COPY_FILES += \
+    device/google/sunfish/permissions/privapp-permissions-aosp-extended.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-aosp-extended.xml
+
 -include hardware/qcom/sm7150/display/config/display-product.mk
 -include vendor/qcom/sm7150/proprietary/display/config/display-product-proprietary.mk
 -include vendor/qcom/sm7150/proprietary/commonsys-intf/data/data_commonsys-intf_system_product.mk
