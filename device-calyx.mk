@@ -24,6 +24,10 @@ PRODUCT_PACKAGES += \
 
 TARGET_PREBUILT_KERNEL := device/google/sunfish-kernel/Image.lz4
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # RCS
 PRODUCT_PACKAGES += \
     PresencePolling \
