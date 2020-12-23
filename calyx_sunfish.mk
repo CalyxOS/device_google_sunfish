@@ -11,3 +11,5 @@ PRODUCT_MODEL := Pixel 4a
 PRODUCT_BRAND := google
 
 PRODUCT_RESTRICT_VENDOR_FILES := false
+
+$(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)
