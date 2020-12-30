@@ -10,3 +10,6 @@ KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_CONFIG := sunfish_defconfig
 TARGET_KERNEL_SOURCE := kernel/google/sunfish
 TARGET_NEEDS_DTBOIMAGE := true
+
+# Data services
+USE_DEVICE_SPECIFIC_DATASERVICES := true
