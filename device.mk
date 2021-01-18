@@ -100,6 +100,11 @@ ifeq ($(wildcard vendor/google_devices/sunfish/proprietary/device-vendor-sunfish
     BUILD_WITHOUT_VENDOR := true
 endif
 
+ifneq ($(INLINE_KERNEL_BUILDING),true)
+TARGET_PREBUILT_KERNEL := device/google/sunfish-kernel/Image.lz4
+PRODUCT_VENDOR_KERNEL_HEADERS := device/google/sunfish-kernel/sm7150/kernel-headers
+endif
+
 PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 29
 
