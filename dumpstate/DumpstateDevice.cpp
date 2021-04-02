@@ -326,8 +326,7 @@ static void *dumpModemThread(void *data)
                 "/data/vendor/radio/metrics_data",
                 "/data/vendor/ssrlog/ssr_log.txt",
                 "/data/vendor/ssrlog/ssr_log_old.txt",
-                "/data/vendor/rfs/mpss/modem_efs",
-                "/sys/kernel/debug/ipa/ipa_statistics_msg"
+                "/data/vendor/rfs/mpss/modem_efs"
             };
 
        bool tcpdumpEnabled = android::base::GetBoolProperty(TCPDUMP_PERSIST_PROPERTY, false);
@@ -490,30 +489,6 @@ static void DumpDisplay(int fd) {
     DumpFileToFd(fd, "PANEL VENDOR NAME", "/sys/class/panel_info/panel0/panel_vendor_name");
     DumpFileToFd(fd, "PANEL SN", "/sys/class/panel_info/panel0/serial_number");
     DumpFileToFd(fd, "PANEL EXTRA INFO", "/sys/class/panel_info/panel0/panel_extinfo");
-
-    const std::string pmic_regmap_path = "/sys/kernel/debug/regmap/spmi0-05";
-    using android::base::WriteStringToFile;
-
-    if (WriteStringToFile("0x80", pmic_regmap_path + "/count", true) &&
-            WriteStringToFile("0xE000", pmic_regmap_path + "/address", true)) {
-        DumpFileToFd(fd, "OLEDB Register Dump", pmic_regmap_path + "/data");
-    } else {
-        dprintf(fd, "Unable to print OLEDB Register Dump\n");
-    }
-
-    if (WriteStringToFile("0x80", pmic_regmap_path + "/count", true) &&
-            WriteStringToFile("0xDE00", pmic_regmap_path + "/address", true)) {
-        DumpFileToFd(fd, "ELVDD Register Dump", pmic_regmap_path + "/data");
-    } else {
-       dprintf(fd, "Unable to print ELVDD Register Dump\n");
-    }
-
-    if (WriteStringToFile("0x60", pmic_regmap_path + "/count", true) &&
-            WriteStringToFile("0xDC00", pmic_regmap_path + "/address", true)) {
-        DumpFileToFd(fd, "ELVSS Register Dump", pmic_regmap_path + "/data");
-    } else {
-        dprintf(fd, "Unable to print ELVSS Register Dump\n");
-    }
 }
 
 static void DumpSensorLog(int fd) {
@@ -529,7 +504,6 @@ static void DumpSensorLog(int fd) {
 }
 
 static void DumpF2FS(int fd) {
-    DumpFileToFd(fd, "F2FS", "/sys/kernel/debug/f2fs/status");
     DumpFileToFd(fd, "F2FS", "/dev/fscklogs/fsck");
     RunCommandToFd(fd, "F2FS - fsck time (ms)", {"/vendor/bin/sh", "-c", "getprop ro.boottime.init.fsck.data"});
     RunCommandToFd(fd, "F2FS - checkpoint=disable time (ms)", {"/vendor/bin/sh", "-c", "getprop ro.boottime.init.mount.data"});
@@ -539,7 +513,6 @@ static void DumpUFS(int fd) {
     DumpFileToFd(fd, "UFS model", "/sys/block/sda/device/model");
     DumpFileToFd(fd, "UFS rev", "/sys/block/sda/device/rev");
     DumpFileToFd(fd, "UFS size", "/sys/block/sda/size");
-    DumpFileToFd(fd, "UFS show_hba", "/sys/kernel/debug/ufshcd0/show_hba");
 
     DumpFileToFd(fd, "UFS Slow IO Read", "/dev/sys/block/bootdevice/slowio_read_cnt");
     DumpFileToFd(fd, "UFS Slow IO Write", "/dev/sys/block/bootdevice/slowio_write_cnt");
@@ -697,7 +670,6 @@ Return<DumpstateStatus> DumpstateDevice::dumpstateBoard_1_1(const hidl_handle& h
     RunCommandToFd(fd, "TEMP-DEFEND Config", {"/vendor/bin/sh", "-c", " cd /sys/devices/platform/soc/soc:google,charger/; for f in `ls bd_*` ; do echo \"$f: `cat $f`\" ; done"});
     RunCommandToFd(fd, "USB Device Descriptors", {"/vendor/bin/sh", "-c", "cd /sys/bus/usb/devices/1-1 && cat product && cat bcdDevice; cat descriptors | od -t x1 -w16 -N96"});
     RunCommandToFd(fd, "Power supply properties", {"/vendor/bin/sh", "-c", "for f in `ls /sys/class/power_supply/*/uevent` ; do echo \"------ $f\\n`cat $f`\\n\" ; done"});
-    RunCommandToFd(fd, "PMIC Votables", {"/vendor/bin/sh", "-c", "cat /sys/kernel/debug/pmic-votable/*/status"});
     RunCommandToFd(fd, "Google Charger", {"/vendor/bin/sh", "-c", "cd /d/google_charger/; for f in `ls pps_*` ; do echo \"$f: `cat $f`\" ; done"});
     RunCommandToFd(fd, "Google Battery", {"/vendor/bin/sh", "-c", "cd /d/google_battery/; for f in `ls ssoc_*` ; do echo \"$f: `cat $f`\" ; done"});
     RunCommandToFd(fd, "Battery EEPROM", {"/vendor/bin/sh", "-c", "xxd /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-0050/2-00500/nvmem"});
