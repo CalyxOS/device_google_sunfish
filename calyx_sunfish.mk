@@ -9,5 +9,6 @@ $(call inherit-product, device/google/sunfish/aosp_sunfish.mk)
 PRODUCT_NAME := calyx_sunfish
 PRODUCT_MODEL := Pixel 4a
 PRODUCT_RESTRICT_VENDOR_FILES := false
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/sunfish
