@@ -12,3 +12,6 @@ TARGET_KERNEL_CONFIG := sunfish_defconfig
 TARGET_KERNEL_SOURCE := kernel/google/sunfish
 TARGET_NEEDS_DTBOIMAGE := true
 endif
+
+# Properties
+TARGET_VENDOR_PROP += device/google/sunfish/vendor.prop
