@@ -10,6 +10,12 @@ PRODUCT_NAME := calyx_sunfish
 PRODUCT_MODEL := Pixel 4a
 PRODUCT_BRAND := google
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=sunfish \
+    PRIVATE_BUILD_DESC="sunfish-user 11 RQ3A.210905.001 7511028 release-keys" \
+
+BUILD_FINGERPRINT := google/sunfish/sunfish:11/RQ3A.210905.001/7511028:user/release-keys
+
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 $(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)
