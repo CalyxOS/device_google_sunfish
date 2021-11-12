@@ -16,6 +16,24 @@
       "message": "Missing newline",
       "revId": "53f7536a9383c48bf10392f181416f9dd82684c1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ccec733_d042f7ac",
+        "filename": "device-calyx.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-11-12T15:41:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "75d6ab54_18534d1f",
+      "revId": "53f7536a9383c48bf10392f181416f9dd82684c1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
