@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75d6ab54_18534d1f",
+        "filename": "device-calyx.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2021-11-12T13:52:13Z",
+      "side": 1,
+      "message": "Missing newline",
+      "revId": "53f7536a9383c48bf10392f181416f9dd82684c1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
