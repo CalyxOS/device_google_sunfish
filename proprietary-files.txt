@@ -2,11 +2,6 @@
 
 # product partition
 
-# Felica
-product/etc/felica/common.cfg
-product/etc/felica/mfm.cfg
-product/etc/felica/mfs.cfg
-
 # Radio
 product/etc/CarrierSettings/a1_at.pb
 product/etc/CarrierSettings/ahamo_jp.pb
