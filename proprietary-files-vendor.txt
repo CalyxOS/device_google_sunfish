@@ -704,6 +704,8 @@ vendor/lib/libmaxxaudio.so
 vendor/lib/libmaxxaudioqdsp.so
 vendor/lib/libmdmdetect.so
 vendor/lib/libmdsprpc.so
+vendor/lib/libmediautils_vendor.so
+vendor/lib/libmemunreachable.so
 vendor/lib/libminkdescriptor.so
 vendor/lib/libminksocket.so
 vendor/lib/libmm-color-convertor.so
