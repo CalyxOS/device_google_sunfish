@@ -2,6 +2,9 @@
 
 # product partition
 
+# Camera extensions
+product/app/PixelCameraServicesSunfish/PixelCameraServicesSunfish.apk;PRESIGNED
+
 # Radio
 product/etc/CarrierSettings/a1_at.pb
 product/etc/CarrierSettings/ahamo_jp.pb
@@ -150,6 +153,10 @@ product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
 # AptX
 system_ext/lib64/libaptXHD_encoder.so
 system_ext/lib64/libaptX_encoder.so
+
+# Camera extensions
+system_ext/etc/permissions/com.google.android.camera.extensions.xml
+system_ext/framework/com.google.android.camera.extensions.jar
 
 # HBM
 system_ext/priv-app/HbmSVManager/HbmSVManager.apk
