@@ -173,6 +173,7 @@ vendor/dsp/cdsp/libvpp_qbr.so
 vendor/dsp/cdsp/libvpp_svc_skel.so
 vendor/dsp/cdsp/ubwcdma_dynlib.so
 vendor/etc/FOSSConfig.xml
+vendor/etc/NOTICE.xml.gz
 vendor/etc/acdbdata/IDP/IDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_Codec_cal.acdb
 vendor/etc/acdbdata/IDP/IDP_General_cal.acdb
