@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab45e2b4_146db2c9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-06T20:36:10Z",
+      "side": 1,
+      "message": "I think this should go to regen-vendor.sh\n\n13239: Merge tag \u0027android-13.0.0_r4\u0027 into staging/android13_merge-android-13.0.0_r4 | https://review.calyxos.org/c/CalyxOS/platform_build/+/13239 includes a change that explains why we see this file.",
+      "revId": "d420e9bc087ae63dbbfaa8b0f81ec6a1627d2387",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
