@@ -19,4 +19,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SEPOLICY_DIRS += device/google/sunfish/sepolicy-lineage/dynamic
 BOARD_SEPOLICY_DIRS += device/google/sunfish/sepolicy-lineage/vendor
 
+# Needed for camera
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
 include vendor/google/sunfish/BoardConfigVendor.mk
