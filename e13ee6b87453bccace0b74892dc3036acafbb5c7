@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39a5cc0f_39ab4b81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-04T06:24:29Z",
+      "side": 1,
+      "message": "Need this for extraction but otherwise we need to re-test as a lot of carriers are broken with the latest configs",
+      "revId": "e13ee6b87453bccace0b74892dc3036acafbb5c7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
