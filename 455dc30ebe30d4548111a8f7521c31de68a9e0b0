@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "de84d48c_e8ff15b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-14T17:44:08Z",
+      "side": 1,
+      "message": "If it works, worth trying bonito too?",
+      "revId": "455dc30ebe30d4548111a8f7521c31de68a9e0b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
