@@ -21,7 +21,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     HbmSVManagerOverlay
 
+<<<<<<< HEAD:device-calyx.mk
 TARGET_PREBUILT_KERNEL := device/google/sunfish-kernel/Image.lz4
+=======
+# Lineage Health
+include hardware/google/pixel/lineage_health/device.mk
+>>>>>>> 8243ba8bf (sunfish: Build Lineage Health HAL):device-lineage.mk
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
