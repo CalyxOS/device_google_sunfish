@@ -16,6 +16,24 @@
       "message": "GMS code in libraries, need to take a closer look.",
       "revId": "54fa89690586b1cffad4c45fe5bc413e73345e1a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41dd5c2a_aef22ccb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-28T21:34:15Z",
+      "side": 1,
+      "message": "I don\u0027t see that in latest lynx jar at least.",
+      "parentUuid": "4c6d308b_6e87f4b8",
+      "revId": "54fa89690586b1cffad4c45fe5bc413e73345e1a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
