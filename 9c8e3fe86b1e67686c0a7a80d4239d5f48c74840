@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0c862a2_1bb41a28",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-28T21:38:58Z",
+      "side": 1,
+      "message": "Ahh there\u0027s some GMS references in here, but I think it should be fine.\n\n1. This doesn\u0027t have INTERNET permission itself\n2. It looks minimal\n3. Likely won\u0027t do anything with microG anyways.",
+      "revId": "9c8e3fe86b1e67686c0a7a80d4239d5f48c74840",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
