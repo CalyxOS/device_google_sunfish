@@ -16,6 +16,23 @@
       "message": "Could also just merge it now too.",
       "revId": "fd1a97ba1031624f813110c225b822cc821e3513",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5bb258e1_30cee85b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-08-09T00:55:01Z",
+      "side": 1,
+      "message": "It matches current SPL date",
+      "revId": "fd1a97ba1031624f813110c225b822cc821e3513",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
