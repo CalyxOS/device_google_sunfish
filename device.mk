@@ -29,6 +29,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/sm8150/display \
     hardware/qcom/sm8150/data/ipacfg-mgr \
     hardware/qcom/sm8150/gps \
+    hardware/qcom/wlan/legacy \
+    system/chre/host/hal_generic \
     vendor/google/camera \
     vendor/qcom/sm8150 \
     vendor/qcom/sm8150/proprietary/commonsys/telephony-apps/DataStatusNotification \
@@ -81,6 +83,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     masterclear.allow_retain_esim_profiles_after_fdr=true
 
 PRODUCT_COPY_FILES += \
+    device/google/sunfish/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml \
     device/google/sunfish/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
@@ -195,7 +198,6 @@ PRODUCT_PACKAGES += \
     update_engine_sideload
 
 PRODUCT_PACKAGES_DEBUG += \
-    sg_write_buffer \
     f2fs_io \
     check_f2fs
 
@@ -905,9 +907,6 @@ include hardware/google/pixel/common/pixel-common-device.mk
 
 # Citadel
 include hardware/google/pixel/citadel/citadel.mk
-
-# Factory OTA
--include vendor/google/factoryota/client/factoryota.mk
 
 -include vendor/qcom/sm8150/proprietary/securemsm/config/cpz_vendor_proprietary_board.mk
 -include vendor/qcom/sm8150/proprietary/securemsm/config/cpz_vendor_proprietary_product.mk
