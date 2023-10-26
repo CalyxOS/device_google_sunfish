@@ -16,6 +16,24 @@
       "message": "Mismerge? Should be removed, fails to compile.",
       "revId": "26287753dd1be88555cf13e465cb1ef9c91492ff",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a28ead20_9c93e1a2",
+        "filename": "device.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-10-26T19:03:19Z",
+      "side": 1,
+      "message": "Yes, I had to redo the merge due to .gitreview change and this was saved in my conflict resolutions somehow. Fixed.",
+      "parentUuid": "686a444c_04642c36",
+      "revId": "26287753dd1be88555cf13e465cb1ef9c91492ff",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
