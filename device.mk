@@ -302,12 +302,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true
 
-# Iaxxx streming and factory binary
-PRODUCT_PACKAGES += \
-    libtunnel \
-    libodsp \
-    adnc_strm.primary.default
-
 # graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
@@ -400,20 +394,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
-# Bluetooth HAL
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-qti \
-    android.hardware.bluetooth@1.0-service-qti
-
 #Bluetooth SAR HAL
-PRODUCT_PACKAGES += \
-    hardware.google.bluetooth.sar@1.0-impl
 PRODUCT_PACKAGES_DEBUG += \
     bluetooth_sar_test
-
-# Bluetooth AFH
-PRODUCT_PACKAGES += \
-    hardware.google.bluetooth.bt_channel_avoidance@1.0-impl
 
 # Bluetooth SoC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -433,8 +416,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/qcom/proprietary/bluetooth/hidl_client
 
 # DRM HAL
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm-service.widevine
+    android.hardware.drm-service.clearkey
 
 # NFC and Secure Element packages
 PRODUCT_PACKAGES += \
@@ -468,17 +450,8 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libstagefrighthw \
     libOmxVdec \
-    libOmxVdecHevc \
     libOmxVenc \
     libc2dcolorconvert
-
-# Enable Codec 2.0
-PRODUCT_PACKAGES += \
-    libqcodec2 \
-    vendor.qti.media.c2@1.0-service \
-    media_codecs_c2.xml \
-    codec2.vendor.ext.policy \
-    codec2.vendor.base.policy
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank=512
@@ -507,14 +480,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims.mm_minqp=1
 
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.7-impl-google \
-    android.hardware.camera.provider@2.7-service-google \
-    camera.sm6150 \
-    libgooglecamerahwl_impl \
-    libqomx_core \
-    libmmjpeg_interface \
-    libmmcamera_interface \
-    libcameradepthcalibrator
+    android.hardware.camera.provider@2.7-service-google
 
 # Google Camera HAL test libraries in debug builds
 PRODUCT_PACKAGES_DEBUG += \
@@ -523,8 +489,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 PRODUCT_PACKAGES += \
     sensors.$(PRODUCT_HARDWARE) \
-    android.hardware.sensors@2.0-service.multihal \
-    hals.conf
+    android.hardware.sensors@2.0-service.multihal
 
 PRODUCT_PACKAGES += \
     fs_config_dirs \
@@ -589,7 +554,6 @@ endif
 PRODUCT_PACKAGES += $(HOSTAPD)
 
 WPA := wpa_supplicant.conf
-WPA += wpa_supplicant_wcn.conf
 WPA += wpa_supplicant
 PRODUCT_PACKAGES += $(WPA)
 
@@ -614,19 +578,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt \
     $(LOCAL_PATH)/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
 
-LIB_NL := libnl_2
-PRODUCT_PACKAGES += $(LIB_NL)
-
 # Audio effects
 PRODUCT_PACKAGES += \
-    libvolumelistener \
-    libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
-    libqcompostprocbundle
+    libqcomvoiceprocessingdescriptors
 
 PRODUCT_PACKAGES += \
-    audio.primary.sm6150 \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
@@ -638,16 +594,6 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.audio.service
-
-# Modules for Audio HAL
-PRODUCT_PACKAGES += \
-    libcirrusspkrprot \
-    libsndmonitor \
-    libmalistener \
-    liba2dpoffload \
-    btaudio_offload_if \
-    libmaxxaudio \
-    libaudiozoom
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
@@ -729,9 +675,6 @@ PRODUCT_PACKAGES += \
 # Storage: for factory reset protection feature
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
-PRODUCT_PACKAGES += \
-    vndk-sp
 
 # Override heap growth limit due to high display density on device
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -834,8 +777,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
 # Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.fpc
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
