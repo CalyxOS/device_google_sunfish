@@ -20,5 +20,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/calyx_sunfish.mk \
 
 COMMON_LUNCH_CHOICES := \
-    aosp_sunfish-userdebug \
-    calyx_sunfish-userdebug \
+    aosp_sunfish-trunk_staging-userdebug \
+    calyx_sunfish-trunk_staging-userdebug \
