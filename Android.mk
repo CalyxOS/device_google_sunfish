@@ -35,14 +35,4 @@ $(eval $(call declare-1p-copy-files,device/google/sunfish,audio_policy_configura
 ifeq ($(USES_DEVICE_GOOGLE_SUNFISH),true)
   subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
   $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
-
-SECUREUI_LIBS := libsecureuisvc_jni.so
-SECUREUI_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT)/app/com.qualcomm.qti.services.secureui/lib/arm64/,$(notdir $(SECUREUI_LIBS)))
-$(SECUREUI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "SecureUI lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /system_ext/lib64/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(SECUREUI_SYMLINKS)
 endif
