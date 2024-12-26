@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74a87c1c_0359274d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-12-26T19:29:43Z",
+      "side": 1,
+      "message": "This is reported to fix fingerprint randomly not working for some people after 14 QPR3",
+      "revId": "0a7c23c8507ef6152028d840aac21035df3f6648",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
